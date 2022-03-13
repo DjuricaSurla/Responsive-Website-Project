@@ -103,9 +103,10 @@ pre {
 }
 
 .showcase .grid {
+  overflow: visible;
+  width: 100%;
   grid-template-columns: auto auto;
   gap: 30px;
-  overflow: visible;
 }
 
 .showcase-text {
@@ -140,12 +141,11 @@ pre {
   outline: none;
 }
 
-.showcase::before,
 .showcase::after {
   content: "";
   position: absolute;
-  height: 100px;
-  bottom: -70px;
+  height: 140px;
+  bottom: -80px;
   right: 0;
   left: 0;
   background: #fff;
@@ -375,6 +375,17 @@ pre {
 
 /* Mobile */
 @media (max-width: 500px) {
+  .showcase-form {
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 330px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+    animation: slideInFromRight 1s ease-in;
+  }
+
   .navbar {
     height: 110px;
   }
